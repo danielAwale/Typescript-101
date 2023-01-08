@@ -53,3 +53,10 @@ const subtract = (x:number, y: number): number => {
 // this is fixed by using the return key word
     return x - y
 }
+
+//VOID Type
+// void type is used when we aren't trying to return anything explicitly! 
+
+const log = (msg: string): void => {
+    console.log(msg);
+}

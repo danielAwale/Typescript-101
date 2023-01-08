@@ -19,3 +19,13 @@ function greet(name) {
 greet('james');
 greet(1);
 greet(false);
+
+// Just like JS we can have multiple parameters with different types! However, order matters 
+
+const doSomething = (person: string, age: number, isFunny: boolean) => {
+
+    return `${person}, ${age}, ${isFunny}`
+
+}
+
+doSomething('james', 12, false);

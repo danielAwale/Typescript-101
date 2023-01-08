@@ -48,6 +48,8 @@ function add(x:number, y:number):number {
 }
 
 const subtract = (x:number, y: number): number => {
-    x - y
+    // x - y
 //A function whose declared type is neither 'void' nor 'any' must return a value.ts(2355)
+// this is fixed by using the return key word
+    return x - y
 }

@@ -35,3 +35,19 @@ doSomething('james', 12, false);
 function greeting(name: string = 'stranger') {
     return `hello ${name}, welcome here`
 }
+
+// FUNCTION RETURN TYPES 
+
+// We can specify the type returned by a function. 
+// Even though ts can often infer this, i prefer the explicit annotations 
+// Add the type annotation after the function parameter list!
+
+
+function add(x:number, y:number):number {
+    return x + y;
+}
+
+const subtract = (x:number, y: number): number => {
+    x - y
+//A function whose declared type is neither 'void' nor 'any' must return a value.ts(2355)
+}

@@ -29,3 +29,9 @@ const doSomething = (person: string, age: number, isFunny: boolean) => {
 }
 
 doSomething('james', 12, false);
+
+// Default Parameters
+
+function greeting(name: string = 'stranger') {
+    return `hello ${name}, welcome here`
+}

@@ -73,3 +73,18 @@ type colors = {
 }
 
 const myAnswer: colors = {sky: "blue", grass: "green"}
+
+// READONLY MODIFIER
+
+type User = {
+    readonly id: number,
+    username: string
+}
+
+const myUser: User = {
+    id: 123,
+    username: "john"
+}
+
+// myUser.id = 456
+// Cannot assign to 'id' because it is a read-only property

@@ -7,3 +7,6 @@ age.push(54)
 const names: string[] = ["james", "john", "joseph"]
 names.push("jerry")
 
+//another way of typing an array
+
+const shoes: Array<string> = []

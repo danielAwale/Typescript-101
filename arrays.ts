@@ -10,3 +10,11 @@ names.push("jerry")
 //another way of typing an array
 
 const shoes: Array<string> = []
+
+// multidimensional Arrays
+
+const board: string[][] = [
+    ['x', 'o', 'x'],
+    ['x', 'o', 'x'],
+    ['x', 'o', 'x']
+]

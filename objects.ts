@@ -62,3 +62,14 @@ const mySong : Song = {
 }
 
 calculatePayout(mySong)
+
+//optional properties!
+//putting in a question mark before after the key/property will let ts know it is optional!
+
+type colors = {
+    sky: string,
+    grass: string,
+    earth?: string
+}
+
+const myAnswer: colors = {sky: "blue", grass: "green"}

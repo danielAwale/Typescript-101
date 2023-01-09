@@ -4,3 +4,4 @@ thing = true
 thing = 1
 thing()
 thing.toUpperCase()
+

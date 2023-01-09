@@ -37,3 +37,28 @@ function printPerson() : Person {
     return {name: 'james', age: 23, isAlive: false}
 }
 
+// Nested Objects 
+
+type Song = {
+    title: string, 
+    artist: string, 
+    numStreams: number,
+    credits: {producer: string, writer: string}
+};
+
+function calculatePayout(song: Song): number {
+    return song.numStreams * 0.0033;
+}
+
+function printSong(song: Song): void {
+    console.log(`${song.title} - ${song.artist}`)
+}
+
+const mySong : Song = {
+    title: "the Dripping Tap",
+    artist: "King Gizzard and the Lizard Wizard",
+    numStreams: 32794938,
+    credits: {producer: "Stu Mackenzie", writer: "Stu Mackenzie"}
+}
+
+calculatePayout(mySong)

@@ -19,3 +19,21 @@ let coordinates: {x:number, y:number} = {x:32, y:33};
 function someCoordinates() : {x: number, y:number} {
     return {x: Math.random(), y: Math.random()}
 }
+
+// Type alias 
+
+// Instead of writing out object types in an annotation we can declare them separately in a type alias which is simply the desired shape of the object
+
+// This allows us to make our code more readable and even the types elsewhere in our code
+
+
+type Person = {
+    name: string,
+    age: number, 
+    isAlive: boolean
+}
+
+function printPerson() : Person {
+    return {name: 'james', age: 23, isAlive: false}
+}
+

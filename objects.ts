@@ -88,3 +88,25 @@ const myUser: User = {
 
 // myUser.id = 456
 // Cannot assign to 'id' because it is a read-only property
+
+//Intersection Types
+
+// we can create intersection type by adding a & to combine different types!
+
+type Cat = {
+    numLives: number
+}
+
+type Dog = {
+    breed: string
+}
+
+type CatDog = Cat & Dog & {
+    age: number
+}
+
+const harper: CatDog = {
+    numLives: 7,
+    breed: "chihuahua",
+    age: 16
+}

@@ -10,3 +10,12 @@ interface Point {
 }
 
 const pt: Point = {x:23, y:25};
+
+interface Person {
+    readonly id: number
+    first: string;
+    last: string;
+    nickname?: string;
+}
+
+const thomas: Person = {id: 23, first: "Thomas", last: "Hardy", nickname: "Tom"}

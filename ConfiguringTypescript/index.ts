@@ -2,10 +2,16 @@ interface Chicken {
     breed: string;
     eggsPerWeek: number;
     name: string;
+    age: number; 
 }
 
 const norma: Chicken = {
     breed: "Silkie",
     eggsPerWeek: 6,
-    name: "Norma"
+    name: "Norma",
+    age: 2
 }
+
+// command line -- 
+// using tsc -w, will put us in watch mode where we can make changes and compile in real time.
+

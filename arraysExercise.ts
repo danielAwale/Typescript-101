@@ -32,7 +32,7 @@ type Product = {
 // Write a function called getTotal that accepts an array of Product types
 // It should return the sum of all the products' prices
 
-const getTotal = (products: Product[]): number  =>{
+const getTotal = (products: Product[]): number  => {
     let total = 0;
     for (let product of products) {
         total += product.price;

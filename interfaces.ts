@@ -30,3 +30,16 @@ const thomas: Person = {
 
 }
 
+interface Product {
+    name: string, 
+    price: number, 
+    applyDiscount(discount: number): number
+}
+
+const shoes: Product = {
+    name: "Jordans",
+    price: 200,
+    applyDiscount(amount: number){
+        return 2;
+    }
+}

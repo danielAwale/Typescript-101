@@ -37,3 +37,16 @@ function calculateTax(price: number | string, tax: number): number {
 let arr: (number | string)[] = [1,2,3,"4",5]
 arr.push("another number");
 arr.push(4321245);
+
+// Literal Types
+
+// Literal types are not just types -  but the values themselves too!
+
+// On it’s own, that’s not super helpful. But combine it with something like unions and you can have a very fine tuned type options for typescript to enforce!
+
+let pi: 3.147 = 3.147;
+// pi = "yummy!"
+
+type dayOfWeekend = 'Friday' | 'Saturday' | 'Sunday'
+
+let today: dayOfWeekend = "Friday"

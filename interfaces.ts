@@ -16,6 +16,17 @@ interface Person {
     first: string;
     last: string;
     nickname?: string;
+    sayHi:() => string;
 }
 
-const thomas: Person = {id: 23, first: "Thomas", last: "Hardy", nickname: "Tom"}
+const thomas: Person = {
+    id: 23, 
+    first: "Thomas", 
+    last: "Hardy", 
+    nickname: "Tom",
+    sayHi: () => {
+        return "Hello!"
+    }
+
+}
+

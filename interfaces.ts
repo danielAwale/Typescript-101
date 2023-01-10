@@ -43,3 +43,23 @@ const shoes: Product = {
         return 2;
     }
 }
+
+
+interface Dog {
+    name: string;
+    age: number;
+}
+
+interface Dog {
+    breed: string; 
+    bark(): string
+}
+
+const elton: Dog = {
+    name: "elton",
+    age: 0.5,
+    breed: "Australian Shepherd",
+    bark(){
+        return "Woof!"
+    }
+}

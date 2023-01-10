@@ -31,3 +31,9 @@ function calculateTax(price: number | string, tax: number): number {
         return price * tax;
 }
 
+//Union types with array!
+// to make a union type with array it is crucial to use parenthesis
+
+let arr: (number | string)[] = [1,2,3,"4",5]
+arr.push("another number");
+arr.push(4321245);

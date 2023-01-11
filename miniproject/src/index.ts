@@ -4,3 +4,7 @@ const sayHello = (person: string = "stranger") => {
 }
 
 sayHello();
+
+const btn = document.getElementById("btn");
+
+console.log(btn);

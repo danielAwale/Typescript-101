@@ -5,11 +5,11 @@ const sayHello = (person: string = "stranger") => {
 
 sayHello();
 
-const btn = document.getElementById("btn");
+const btn = document.getElementById("btn")!;
 
 console.log(btn);
 
-btn?.addEventListener("click", function() {
+btn.addEventListener("click", function() {
     alert("CLICKED!!");
 })
 
@@ -19,3 +19,4 @@ btn?.addEventListener("click", function() {
 
 //btn?.
 
+//using the non null operator ! we can be sure that the specific item won't be null

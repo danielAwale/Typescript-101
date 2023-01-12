@@ -20,3 +20,7 @@ btn.addEventListener("click", function() {
 //btn?.
 
 //using the non null operator ! we can be sure that the specific item won't be null
+
+// TYPE ASSERTIONS 
+// Sometimes you might have more specific information about a values type and you want tot make sure TS knows it too
+// You can asserta values type by using the as keyword followed by the specific type you want to assert

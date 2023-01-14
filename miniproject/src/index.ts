@@ -31,3 +31,4 @@ let mystery: unknown = "Hello World!";
 const numChars = (mystery as string).length;
 // 'mystery' is of type 'unknown'.
 // using as
+

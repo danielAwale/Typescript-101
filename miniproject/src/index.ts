@@ -8,10 +8,19 @@ sayHello();
 const btn = document.getElementById("btn")! as HTMLButtonElement;
 const input = document.getElementById("todoinput")! as HTMLInputElement;
 const form = document.querySelector("form")!;
+const list = document.getElementById("todolist")!;
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
-    console.log("submitted")
+    const newTodo = input.value;
+    const newLI = document.createElement("li")
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    newLI.append(newTodo);
+    newLI.append(checkbox)
+    list.append(newLI);
+    input.value= "";
+
 });
 
 //a different syntax
@@ -45,5 +54,7 @@ let mystery: unknown = "Hello World!";
 const numChars = (mystery as string).length;
 // 'mystery' is of type 'unknown'.
 // using as
+
+
 
 

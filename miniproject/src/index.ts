@@ -5,13 +5,21 @@ const sayHello = (person: string = "stranger") => {
 
 sayHello();
 
-const btn = document.getElementById("btn")!;
+const btn = document.getElementById("btn")! as HTMLButtonElement;
+const input = document.getElementById("todoinput")! as HTMLInputElement;
+
+//a different syntax
+
+//(<HTMLInputElement>input).value doesn't work with jsx components
 
 console.log(btn);
 
 btn.addEventListener("click", function() {
-    alert("CLICKED!!");
+    alert(input.value);
+    input.value = "";
 })
+
+
 
 // we get an error saying 'btn' is possibly 'null'.
 

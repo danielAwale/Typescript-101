@@ -24,3 +24,10 @@ btn.addEventListener("click", function() {
 // TYPE ASSERTIONS 
 // Sometimes you might have more specific information about a values type and you want tot make sure TS knows it too
 // You can asserta values type by using the as keyword followed by the specific type you want to assert
+
+
+let mystery: unknown = "Hello World!";
+
+const numChars = (mystery as string).length;
+// 'mystery' is of type 'unknown'.
+// using as

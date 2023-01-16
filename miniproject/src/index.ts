@@ -5,24 +5,38 @@ const sayHello = (person: string = "stranger") => {
 
 sayHello();
 
+interface Todo {
+    text: string;
+    completed: boolean;
+}
+
 const btn = document.getElementById("btn")! as HTMLButtonElement;
 const input = document.getElementById("todoinput")! as HTMLInputElement;
 const form = document.querySelector("form")!;
 const list = document.getElementById("todolist")!;
 
+const todos: Todo[] = []
+
 form.addEventListener("submit", function(e){
     e.preventDefault();
+    const anewTodo: Todo = {
+        text: input.value, 
+        completed: false,
+    }
+    todos.push(anewTodo);
+    
+});
+
+function createTodo(todo: Todo){
     const newTodo = input.value;
     const newLI = document.createElement("li")
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    newLI.append(newTodo);
+    newLI.append(todo.text);
     newLI.append(checkbox)
     list.append(newLI);
     input.value= "";
-
-});
-
+}
 //a different syntax
 
 //(<HTMLInputElement>input).value doesn't work with jsx components

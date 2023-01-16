@@ -15,6 +15,8 @@ const input = document.getElementById("todoinput")! as HTMLInputElement;
 const form = document.querySelector("form")!;
 const list = document.getElementById("todolist")!;
 
+const todosJSON = localStorage.getItem("todos")
+console.log(JSON.parse(todosJSON));
 const todos: Todo[] = []
 
 form.addEventListener("submit", function(e){
@@ -23,7 +25,11 @@ form.addEventListener("submit", function(e){
         text: input.value, 
         completed: false,
     }
+    createTodo(anewTodo);
     todos.push(anewTodo);
+
+    this.localName.setItem("todos", JSON.stringify(todos))
+    input.value= "";
     
 });
 
@@ -35,7 +41,6 @@ function createTodo(todo: Todo){
     newLI.append(todo.text);
     newLI.append(checkbox)
     list.append(newLI);
-    input.value= "";
 }
 //a different syntax
 

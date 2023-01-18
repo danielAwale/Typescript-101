@@ -14,7 +14,7 @@
 // }
 
 class Player {
-    private _score: number = 0;    
+    protected _score: number = 0;    
     constructor(public first: string, public last: string){}
 
     get fullName() :string {
@@ -30,8 +30,22 @@ class Player {
             throw new Error ("score cannot be negative")
         } 
         this._score = newScore
+        //protected class is only accessible in the child. 
+    }
+}
+
+class SuperPlayer extends Player {
+    public isAdmin: boolean = true;
+
+    maxScore() {
+        this._score = 999999;
+
     }
 }
 
 const john = new Player("John", "Watson");
 console.log(john.fullName)
+
+// So public available anywhere private only available in the exact class you define it in, protected
+
+// available in the class you define it in.

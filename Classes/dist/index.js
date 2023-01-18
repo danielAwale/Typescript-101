@@ -28,7 +28,19 @@ class Player {
             throw new Error("score cannot be negative");
         }
         this._score = newScore;
+        //protected class is only accessible in the child. 
+    }
+}
+class SuperPlayer extends Player {
+    constructor() {
+        super(...arguments);
+        this.isAdmin = true;
+    }
+    maxScore() {
+        this._score = 999999;
     }
 }
 const john = new Player("John", "Watson");
 console.log(john.fullName);
+// So public available anywhere private only available in the exact class you define it in, protected
+// available in the class you define it in.

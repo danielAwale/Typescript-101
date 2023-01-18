@@ -36,7 +36,11 @@ class Player {
     }
 }
 
-const player1 = new Player("blue", "steele")
+class AdminPlayer extends Player {
+    isAdmin = true;
+}
+
+// const player1 = new Player("blue", "steele")
 // player1.taunt();
 // console.log(player1.first)
 // console.log(player1.last)
@@ -47,14 +51,17 @@ const player1 = new Player("blue", "steele")
 // console.log(player1.getScore())
 // player1.setScore(42)
 // console.log(player1.getScore())
-console.log(player1.fullName);
-console.log(player1.score);
-player1.score = 129;
-console.log(player1.score)
+// console.log(player1.fullName);
+// console.log(player1.score);
+// player1.score = 129;
+// console.log(player1.score)
 
 
-const player2 = new Player("daniel", "awale")
-// player2.taunt();
+// const player2 = new Player("daniel", "awale")
+// // player2.taunt();
 
+const ad = new AdminPlayer();
+console.log(ad)
+console.log(ad.taunt())
 
 

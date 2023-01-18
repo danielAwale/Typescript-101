@@ -14,9 +14,24 @@
 // }
 
 class Player {
-    private score: number = 0;    
+    private _score: number = 0;    
     constructor(public first: string, public last: string){}
 
+    get fullName() :string {
+        return `${this.first} ${this.last}`
+    }
+
+    get score():number {
+        return this._score
+    }
+
+    set score(newScore: number) {
+        if(newScore < 0) {
+            throw new Error ("score cannot be negative")
+        } 
+        this._score = newScore
+    }
 }
 
 const john = new Player("John", "Watson");
+console.log(john.fullName)

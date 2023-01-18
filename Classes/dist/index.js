@@ -38,6 +38,10 @@ class Player {
 
 class AdminPlayer extends Player {
     isAdmin = true;
+    constructor(first, last, powers) {
+        super(first, last);
+        this.powers = powers
+    }
 }
 
 // const player1 = new Player("blue", "steele")
@@ -60,8 +64,10 @@ class AdminPlayer extends Player {
 // const player2 = new Player("daniel", "awale")
 // // player2.taunt();
 
-const ad = new AdminPlayer();
+const ad = new AdminPlayer("jon", "walters", "water");
 console.log(ad)
-console.log(ad.taunt())
+console.log(ad.taunt());
+
+
 
 

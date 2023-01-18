@@ -1,14 +1,21 @@
 "use strict";
-var _Player_score;
+// class Player {
+//     readonly first: string;
+//     readonly last: string;
+//     // private score: number = 0;
+//     // private will only work in ts, wont work during runtime
+//     #score: number = 0;
+//     // hash symbol will work in ts and js, will work during runtime
+//     constructor(first: string, last: string){
+//         this.first = first
+//         this.last = last
+//     }
+// }
 class Player {
-    // hash symbol will work in ts and js, will work during runtime
     constructor(first, last) {
-        // private score: number = 0;
-        // private will only work in ts, wont work during runtime
-        _Player_score.set(this, 0);
         this.first = first;
         this.last = last;
+        this.score = 0;
     }
 }
-_Player_score = new WeakMap();
 const john = new Player("John", "Watson");

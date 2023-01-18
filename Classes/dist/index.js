@@ -14,6 +14,13 @@ class Player {
     get score() {
         return this.#score
     }
+
+    set score(update) {
+        if(update < 0) {
+            throw Error 
+        } else
+        this.#score = update;
+    }
     taunt(){
         console.log("BOOYAH!")
     }
@@ -42,8 +49,12 @@ const player1 = new Player("blue", "steele")
 // console.log(player1.getScore())
 console.log(player1.fullName);
 console.log(player1.score);
+player1.score = 129;
+console.log(player1.score)
 
 
 const player2 = new Player("daniel", "awale")
 // player2.taunt();
+
+
 

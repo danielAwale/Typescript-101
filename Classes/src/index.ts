@@ -65,3 +65,36 @@ class Jacket implements Colorful {
 
 const bike1 = new Bike("Red")
 const jacket1 = new Jacket("Prada", "black")
+
+abstract class Employee {
+    constructor(public first: string, public last: string){
+    }
+    abstract getPay(): number;
+    greet() {
+        console.log("Hello!")
+    }
+}
+
+class FullTimeEmployee extends Employee {
+    constructor(first: string, last: string, private salary: number){
+        super(first, last);
+
+    }
+    getPay(): number {
+        return this.salary;
+    }
+}
+
+class PartTimeEmployee extends Employee{
+    constructor(first: string, last: string, private hurlyRate:number, private hoursWorked: number) {
+        super (first, last)
+    }
+    getPay(): number {
+        return this.hurlyRate * this.hoursWorked;
+    }
+}
+
+const betty = new FullTimeEmployee("Betty", "White", 96000)
+console.log(betty.getPay());
+const bill = new PartTimeEmployee("Bill", "Billerson", 24, 1100)
+console.log(bill.getPay());

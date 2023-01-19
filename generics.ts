@@ -44,5 +44,13 @@ getRandomElement<number>([4,32,43,2,1,4,5]);
 getRandomElement(["a", "a", "D","e"])
 
 // You don't have to go around using this generic type parameter syntax all the time.
-
 // There are times you have to, but sometimes you can rely on TypeScript ability to infer the type.
+
+function merge<T, U>(object1: T, object2: U){
+    return{
+        ...object1, 
+        ...object2
+    }
+}
+
+const combo = merge({name: "Daniel"}, {pets: "none"})

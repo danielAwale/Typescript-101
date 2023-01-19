@@ -42,5 +42,17 @@ class SuperPlayer extends Player {
 }
 const john = new Player("John", "Watson");
 console.log(john.fullName);
-// So public available anywhere private only available in the exact class you define it in, protected
-// available in the class you define it in.
+class Bike {
+    // color = "red"
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Jacket {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+}
+const bike1 = new Bike("Red");
+const jacket1 = new Jacket("Prada", "black");

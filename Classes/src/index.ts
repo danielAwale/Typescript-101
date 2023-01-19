@@ -49,3 +49,19 @@ console.log(john.fullName)
 // So public available anywhere private only available in the exact class you define it in, protected
 
 // available in the class you define it in.
+
+interface Colorful {
+    color: string;
+}
+
+class Bike implements Colorful {
+    // color = "red"
+    constructor(public color: string) {}
+}
+
+class Jacket implements Colorful {
+    constructor(public brand: string, public color: string){}
+}
+
+const bike1 = new Bike("Red")
+const jacket1 = new Jacket("Prada", "black")

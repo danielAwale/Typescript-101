@@ -25,4 +25,18 @@ function identity<Type>(item: Type): Type {
     return item; 
 }
 
-identity<number>(7);
+// identity<number>(7);
+// identity<string>("fhhf");
+
+interface Cat {
+    name: string
+    breed: string;
+}
+
+function getRandomElement<T>(list: T[]):T{
+    const randIndex = Math.floor(Math.random() * list.length)
+    return list[randIndex];
+}
+
+getRandomElement<string>(["a","b","c"]);
+getRandomElement<number>([4,32,43,2,1,4,5]);

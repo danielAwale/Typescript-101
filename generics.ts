@@ -7,3 +7,22 @@
 //const nums: number[] = []
 const nums: Array<number> = []
 const colors: Array<string> = []
+
+function numberIdentity(item: number): number{
+    return item;
+}
+
+function stringIdentity(item: string): string{
+    return item;
+}
+
+// //below is not good!
+// function identity(item: any): any{
+//     return item; 
+// }
+
+function identity<Type>(item: Type): Type {
+    return item; 
+}
+
+identity<number>(7);

@@ -143,6 +143,7 @@ function getFarmAnimalSound(animal: FarmAnimal){
         return "Moo";
         case ("rooster"):
         return "cokadoodledoo"
+        
     }
 }
 
@@ -151,5 +152,4 @@ const stevie: Rooster = {
     weight: 2,
     age: 1.5,
     kind: "rooster"
-
 }

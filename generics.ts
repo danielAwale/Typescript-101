@@ -46,7 +46,7 @@ getRandomElement(["a", "a", "D","e"])
 // You don't have to go around using this generic type parameter syntax all the time.
 // There are times you have to, but sometimes you can rely on TypeScript ability to infer the type.
 
-function merge<T, U>(object1: T, object2: U){
+function merge<T extends object, U extends object>(object1: T, object2: U){
     return{
         ...object1, 
         ...object2
@@ -54,3 +54,16 @@ function merge<T, U>(object1: T, object2: U){
 }
 
 const combo = merge({name: "Daniel"}, {pets: "none"})
+// merge({name: "Danie"}, 9)
+//Argument of type 'number' is not assignable to parameter of type 'object'.
+
+interface Lengthy {
+    length: number; 
+}
+
+function getLength<T extends Lengthy>(thing: T) : number {
+    return thing.length
+}
+
+getLength("something");
+

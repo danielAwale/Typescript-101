@@ -7,3 +7,5 @@ function triple(value: number | string): number | string{
     } 
     return value * 3
 }
+
+const el = document.getElementById("idk");

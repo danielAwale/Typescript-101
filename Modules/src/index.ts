@@ -1,7 +1,6 @@
-import {add, sample} from "./utils.js"
-
+import {add, sample} from "./utils"
 console.log("Hello World")
 
-sample([1234])
-add(1,2)
+console.log(sample([1234]))
+console.log(add(1,2))
 

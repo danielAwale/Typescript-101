@@ -9,3 +9,30 @@ function triple(value: number | string): number | string{
 }
 
 const el = document.getElementById("idk");
+
+if(el) {
+    el
+} else {
+    el
+}
+
+const printLetters = (word?: string) =>  {
+    if(word) {
+        for (let char of word) {
+            console.log(char);
+        }
+    } else {
+        console.log("You did not pass in a word")
+    }
+}
+
+// equality narrowing
+
+function someDemo(x: string|number, y: string|boolean) {
+    if (x === y) {
+        x.toUpperCase()
+
+    }
+}
+
+someDemo(3, "3")

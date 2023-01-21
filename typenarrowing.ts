@@ -109,3 +109,47 @@ function makeNoise(animal: Cat | Dog){
         animal
     }
 }
+
+// Discrimated Unipns 
+
+interface Rooster{
+    name: string, 
+    weight: number,
+    age: number,
+    kind: "rooster"
+}
+
+interface Cow {
+    name: string, 
+    weight: number, 
+    age: number,
+    kind: "cow"
+}
+
+interface Pig {
+    name: string, 
+    weight: number, 
+    age: number,
+    kind: "pig"
+}
+
+type FarmAnimal = Pig | Rooster | Cow
+
+function getFarmAnimalSound(animal: FarmAnimal){
+    switch(animal.kind){
+        case("pig"):
+        return "Oink!";
+        case("cow"):
+        return "Moo";
+        case ("rooster"):
+        return "cokadoodledoo"
+    }
+}
+
+const stevie: Rooster = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "rooster"
+
+}

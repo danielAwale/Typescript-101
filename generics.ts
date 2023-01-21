@@ -67,3 +67,9 @@ function getLength<T extends Lengthy>(thing: T) : number {
 
 getLength("something");
 
+function makeEmptyList<T = number>():T[] {
+    return []
+}
+
+const num = makeEmptyList();
+const bools = makeEmptyList<boolean>();

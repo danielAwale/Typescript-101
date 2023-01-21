@@ -36,3 +36,24 @@ function someDemo(x: string|number, y: string|boolean) {
 }
 
 someDemo(3, "3")
+
+// in operator
+interface Movie {
+    title: string, 
+    duration: number
+}
+
+interface TVShow {
+    title: string, 
+    numEpisodes: number, 
+    episodeDuration: number, 
+}
+
+function getDuration(media: Movie|TVShow){
+    if("numEpisodes" in media) {
+        return media.numEpisodes * media.episodeDuration
+    }
+    media.duration
+}
+
+

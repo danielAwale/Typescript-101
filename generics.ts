@@ -73,3 +73,29 @@ function makeEmptyList<T = number>():T[] {
 
 const num = makeEmptyList();
 const bools = makeEmptyList<boolean>();
+
+interface Song {
+    title: string,
+    artist: string,
+}
+
+interface Video {
+    title: string, 
+    creator: string, 
+    resolution: string
+}
+
+// class VideoPlaylist {
+//     public videos: Video[] = []
+// }
+
+// class SongPlaylist {
+//     public songs: Song[] = []
+// }
+
+class Playlist<T> {
+    public queue: T[] = [];
+    add(el: T) {
+        this.queue.push(el)
+    }
+}

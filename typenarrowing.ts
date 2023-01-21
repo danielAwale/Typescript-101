@@ -56,4 +56,31 @@ function getDuration(media: Movie|TVShow){
     media.duration
 }
 
+//instaceof
 
+function printFullDate(date: string | Date){
+    if (date instanceof Date) {
+        date.toUTCString();
+    }
+    else {
+        new Date(date).toUTCString();
+    }
+}
+
+class User {
+    constructor(public name: string) {
+
+    }
+}
+class Company {
+    constructor(public name: string){}
+}
+
+function printName(entity: User | Company){
+    if(entity instanceof User) {
+
+    }
+    else {
+        entity
+    }
+}

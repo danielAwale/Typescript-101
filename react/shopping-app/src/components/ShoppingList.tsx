@@ -6,8 +6,13 @@ interface ShoppingListProps {
 }
 
 export default function ShoppingList(props: ShoppingListProps): JSX.Element{
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault();
+        console.log('submitted');
+        
+    }
   return (
-    <div>
+    <div onSubmit={handleSubmit}>
         <h1>Shopping List</h1>
         <ul>
            {props.items.map(item => (

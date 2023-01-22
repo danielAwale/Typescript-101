@@ -3,6 +3,7 @@ import './App.css';
 // import Greeter from './components/Greeter';
 import ShoppingList from './components/ShoppingList';
 import Item from "./models/item"
+import ShoppingListForm from './components/ShoppingForm';
 
 function App() {
 
@@ -14,6 +15,7 @@ const [items, setItems] = useState<Item[]>([])
   return (
     <div>
       <ShoppingList items={items}/>
+      <ShoppingListForm />
     </div>
   );
 }

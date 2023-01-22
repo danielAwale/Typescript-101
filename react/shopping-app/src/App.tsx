@@ -3,11 +3,15 @@ import './App.css';
 // import Greeter from './components/Greeter';
 import ShoppingList from './components/ShoppingList';
 import Item from "./models/item"
-import ShoppingListForm from './components/ShoppingForm';
+import ShoppingForm from './components/ShoppingForm';
 
 function App() {
 
 const [items, setItems] = useState<Item[]>([])
+const addItem = (product: string) => {
+  console.log("Made it to the app");
+  console.log(product);
+}
 //   const items = [
 //     {id:1, product: "Lemon", quantity: 3},
 //     {id:2, product: "chicken breast", quantity: 3}
@@ -15,7 +19,7 @@ const [items, setItems] = useState<Item[]>([])
   return (
     <div>
       <ShoppingList items={items}/>
-      <ShoppingListForm />
+      <ShoppingForm onAddItem={addItem} />
     </div>
   );
 }

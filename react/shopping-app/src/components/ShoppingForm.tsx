@@ -1,7 +1,11 @@
 import React from "react";
 
 function ShoppingListForm(): JSX.Element {
-    return <form>
+    function handleSubmit(e: React.FormEvent) {
+        e.preventDefault();
+        console.log('submitted');
+    }
+    return <form onSubmit={handleSubmit}>
         <input type="text" placeholder="product name" />
         <button type="submit">Add</button>
     </form>

@@ -10,7 +10,7 @@ function App() {
 const [items, setItems] = useState<Item[]>([])
 const addItem = (product: string) => {
   console.log("Made it to the app");
-  console.log(product);
+  setItems([...items, {id: 3, product, quantity: 1}])
 }
 //   const items = [
 //     {id:1, product: "Lemon", quantity: 3},
